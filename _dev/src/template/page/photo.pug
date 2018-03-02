@@ -1,0 +1,90 @@
+extends ../main
+
+block vars
+	- 
+		var show_button = true,
+				breadcrumbs = [
+				{
+					url: "/",
+					name: "Главная"
+				},
+				{
+					url: "/",
+					name: "Фото"
+				}
+			];
+
+
+block content
+	// ====== photos ======= 
+	.photos
+		._container
+			.title
+				.title__inner
+					.title__text Фото
+
+
+			ul._row.photos-list
+				li.photos-item
+					a.photos-link(href="img/photos/photo_1.jpg", data-fancybox-group="gallery", title="Lorem ipsum dolor sit amet, consectetur adipiscing elit")
+						.photos-img-holder
+							img.photos-img(src="img/photos/photo_1.jpg", alt="")
+				li.photos-item
+					a.photos-link(href="img/photos/photo_2.jpg", data-fancybox-group="gallery", title="Lorem ipsum dolor sit amet, consectetur adipiscing elit")
+						.photos-img-holder
+							img.photos-img(src="img/photos/photo_2.jpg", alt="", )
+				li.photos-item
+					a.photos-link(href="img/photos/photo_3.jpg", data-fancybox-group="gallery", title="Lorem ipsum dolor sit amet, consectetur adipiscing elit")
+						.photos-img-holder
+							img.photos-img(src="img/photos/photo_3.jpg", alt="")
+				li.photos-item
+					a.photos-link(href="img/photos/photo_4.jpg", data-fancybox-group="gallery", title="Lorem ipsum dolor sit amet, consectetur adipiscing elit")
+						.photos-img-holder
+							img.photos-img(src="img/photos/photo_4.jpg", alt="")
+				li.photos-item
+					a.photos-link(href="img/photos/photo_5.jpg", data-fancybox-group="gallery")
+						.photos-img-holder
+							img.photos-img(src="img/photos/photo_5.jpg", alt="")
+				li.photos-item
+					a.photos-link(href="img/photos/photo_6.jpg")
+						.photos-img-holder
+							img.photos-img(src="img/photos/photo_6.jpg", alt="")
+				li.photos-item
+					a.photos-link(href="#")
+						.photos-img-holder
+							img.photos-img(src="img/photos/photo_1.jpg", alt="")
+				li.photos-item
+					a.photos-link(href="#")
+						.photos-img-holder
+							img.photos-img(src="img/photos/photo_2.jpg", alt="")
+				li.photos-item
+					a.photos-link(href="#")
+						.photos-img-holder
+							img.photos-img(src="img/photos/photo_3.jpg", alt="")
+				li.photos-item
+					a.photos-link(href="#")
+						.photos-img-holder
+							img.photos-img(src="img/photos/photo_4.jpg", alt="")
+				li.photos-item
+					a.photos-link(href="#")
+						.photos-img-holder
+							img.photos-img(src="img/photos/photo_5.jpg", alt="")
+				li.photos-item
+					a.photos-link(href="#")
+						.photos-img-holder
+							img.photos-img(src="img/photos/photo_6.jpg", alt="")
+
+			.paging
+				ul.paging__list
+					li.paging__item.paging__item_prev
+						a.paging__link(href="#") <<
+					li.paging__item.paging__item_active
+						a.paging__link(href="#") 1
+					li.paging__item
+						a.paging__link(href="#") 2
+					li.paging__item
+						a.paging__link(href="#") 3
+					li.paging__item
+						a.paging__link(href="#") 4
+					li.paging__item.paging__item_next
+						a.paging__link(href="#") >>

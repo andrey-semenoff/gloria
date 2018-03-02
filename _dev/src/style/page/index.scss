@@ -1,0 +1,171 @@
+/*! ===== slider main ===== */
+.slider {
+
+}
+
+.slide {
+	position: relative;
+	padding: 200px 15px 250px;
+	text-align: right;
+
+	&-img {
+		position: absolute;
+		left: -200px;
+		bottom: 0;
+		z-index: -1;
+	}
+
+	&-text {
+		display: inline-block;
+		text-align: center;
+  	font: 26px $TrebuchetMS-Bold;
+	}
+
+	&-text__big {
+		font-size: 61px;
+	}
+
+	&-text__normal {
+		margin-top: 10px;
+	}
+
+	&__button {
+		margin-top: 35px;
+		border: none;
+		box-shadow: 0 10px 35px rgba(#ffa404, 0.5);
+	}
+}
+
+/*! ===== apartments ===== */
+.apartments {
+	padding-top: 30px;
+
+	&-list {
+		
+	}
+
+	&-item {
+		float: left;
+		width: 33.33%;
+		padding: 15px;
+
+		&__text {
+			@include center-translate();
+		  font: 42px $TrebuchetMS-Bold;
+		  color: #fff;
+		  text-align: center;
+			z-index: 2;
+		}
+
+		&:nth-of-type(3n+2) .apartments-link {
+			transform: translateY(-50%);
+		}
+	}
+
+	&-link {
+		position: relative;
+		display: inline-block;
+		width: 390px;
+		height: 390px;
+		border-radius: 50%;
+		overflow: hidden;
+
+		&:before {
+			content: '';
+			@include center-absolute();
+			background: rgba(#000, 0.3);
+			border-radius: 50%;
+			transition: .5s;
+			z-index: 1;
+		}
+
+		&:hover:before {
+			box-shadow: inset 0 0 50px #000;
+		}
+		
+		&:hover .apartments-img {
+			transform: scale(1.1);
+		}
+	}
+
+	&-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: .5s;
+
+		&-holder {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	
+	&-decor {
+		margin-top: -100px;
+		text-align: center;
+
+		&__img {
+		margin-top: -100px;
+
+		}
+	}
+}
+
+/*! ===== section_yellow ===== */
+.section_yellow {
+	padding: 200px 15px 110px;
+	background: #fff url(../img/bg_yellow.jpg) center no-repeat;
+	background-size: contain;
+	
+	&__inner {
+		padding: 50px 130px;
+		border: 2px solid #fff;
+
+		h6 {
+			text-transform: uppercase;
+			margin-bottom: 30px;
+			text-align: center;
+			font-size: 18px;
+		}
+
+		p {
+			font-size: 14px;
+		}
+	}
+}
+
+/*! ===== section_white ===== */
+.section_white {
+	
+}
+
+/*! ===== section_blue ===== */
+.section_blue {
+	margin: -50px auto -150px;
+	padding: 250px 15px 200px;
+	background: #fff url(../img/bg_blue.png) center no-repeat;
+
+	&__inner {
+		position: relative;
+	}
+
+	.title {
+		text-align: left;
+		margin: 0;
+	}
+}
+
+.section_blue__img {
+	position: absolute;
+	top: -75%;
+	right: 10%;
+}
+
+.section_blue__news-item-date {
+	font-style: italic;
+}
+
+.section_blue__link {
+	text-decoration: underline;
+	color: $body-font-color;
+}

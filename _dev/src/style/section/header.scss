@@ -1,0 +1,174 @@
+/*! ===== header styles ===== */
+
+header.header {
+  padding: 0 15px 35px;
+}
+
+.logo {
+	float: left;
+	width: 30%;
+	padding-top: 45px;
+	font-family: $Drina;
+	
+	&__link {
+
+	}
+
+	&__img {
+
+	}
+}
+
+
+
+.header__right {
+	float: right;
+	width: 70%;
+}
+
+.header__contacts {
+	margin-top: 10px;
+	font-family: $TrebuchetMS-Bold;
+	color: #fff;
+	text-align: right;
+}
+
+.header__phones {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 24px;
+	margin: 0;
+
+	&-item {
+		display: inline-block;
+		margin-left: 30px;
+	}
+
+	&-link {
+		display: inline-block;
+		color: #fff;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+.header__languages {
+	position: relative;
+	display: inline-block;
+	width: 45px;
+	height: 18px;
+	margin-left: 35px;
+
+	&-list[class] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 18px;
+		overflow: hidden;
+		margin: 0;
+		
+		&:hover {
+			height: auto;
+		}
+	}
+
+
+	&-item {
+		display: block;
+		margin-bottom: 10px;
+		text-align: left;
+
+		&:not(:first-child):hover .header__languages-link {
+			background-color: #000;
+		}
+	}
+
+	&-item_active:after {
+		content: '';
+		display: inline-block;
+		border-top: 5px solid #fff;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+	}
+
+	&-link {
+		color: #fff;
+		margin-right: 5px;
+	}
+}
+
+.header__menu {
+	text-align: right;
+}
+
+.button {
+	margin-top: 25px;
+}
+
+.menu {
+	margin-top: 40px;
+	font-size: 0;
+
+	&-item {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 16px;
+		text-align: left;
+
+		&_parent {
+			position: relative;
+
+			& .menu-link {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+
+				&:hover ~ .submenu {
+					display: block;
+				}
+			}
+		}
+
+		&_active .menu-link {
+			background-color: $orange;
+		}
+	}
+	
+	&-link {
+		display: inline-block;
+		padding: 15px 20px;
+		border-radius: 25px;
+		color: #fff;
+		font-family: $TrebuchetMS-Bold;
+
+		&:first-letter {
+			text-transform: uppercase;
+		}
+
+		&:hover {
+			background-color: $orange;
+		}
+	}
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: $orange;
+	border-radius: 25px;
+	border-top-left-radius: unset;
+
+	&-item {
+
+	}
+
+	&-link {
+		@extend .menu-link;
+		white-space: nowrap;
+	}
+}

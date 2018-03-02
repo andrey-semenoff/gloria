@@ -1,0 +1,6 @@
+if breadcrumbs != undefined
+	.breadcrumbs
+		ul.breadcrumbs__list
+			each breadcrumb in breadcrumbs
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href=breadcrumb.url)= breadcrumb.name

@@ -1,0 +1,24 @@
+extends ../main
+
+block vars
+	- 
+		var show_button = true,
+				breadcrumbs = [
+				{
+					url: "/",
+					name: "Главная"
+				},
+				{
+					url: "/",
+					name: "Новости"
+				}
+			];
+
+
+block content
+	// ====== news ======= 
+	.news
+		._container
+			.title
+				.title__inner
+					.title__text Новости

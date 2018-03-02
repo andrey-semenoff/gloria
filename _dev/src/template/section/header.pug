@@ -1,0 +1,50 @@
+// ====== header ======= 
+header.header
+	._container
+		._row
+			.logo
+				a.logo__link(href="#")
+					img.logo__img(src="/img/logo.png", alt="logo")
+
+			.header__right
+				.header__contacts
+					ul.header__phones
+						li.header__phones-item
+							a.header__phones-link(href="callto:123456") +38 048 123 45 67
+						li.header__phones-item
+							a.header__phones-link(href="callto:123456") +38 048 123 45 67
+
+					.header__languages
+						ul.header__languages-list
+							li.header__languages-item.header__languages-item_active
+								a.header__languages-link(href="#") Рус
+							li.header__languages-item
+								a.header__languages-link(href="#") Eng
+
+
+				.header__menu
+					ul.menu
+						li.menu-item.menu-item_active
+							a.menu-link(href="/") Главная
+						li.menu-item
+							a.menu-link(href="photo.html") фото
+						li.menu-item
+							a.menu-link(href="numers.html") Номера
+						li.menu-item.menu-item_parent
+							a.menu-link(href="service.html") сервис
+							ul.submenu
+								li.submenu-item
+									a.submenu-link(href="food.html") Питание
+								li.submenu-item
+									a.submenu-link(href="booking.html") Условия бронирования
+								li.submenu-item
+									a.submenu-link(href="leisure.html") досуг
+						li.menu-item
+							a.menu-link(href="news.html") Новости
+						li.menu-item
+							a.menu-link(href="contacts.html") контакты
+					
+					if show_button
+						a.button.button_orange(href="#") забронировать
+	
+		include breadcrumbs

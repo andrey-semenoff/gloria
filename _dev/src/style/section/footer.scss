@@ -1,0 +1,87 @@
+/*! ===== footer styles ===== */
+
+footer.footer {
+	background: transparent url(../img/bg_footer.png) bottom center no-repeat;
+	padding-bottom: 100px;
+}
+
+.footer-socials {
+	text-align: center;
+
+	&-item {
+		display: inline-block;
+		margin: 0 5px;
+	}
+
+	&-link {
+		position: relative;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		color: #fff;
+
+		.fa {
+			@include center-translate();
+		}
+
+		&_fb {
+			background-color: #4a5995;
+		}
+		&_ig {
+			background-color: #7025c4;
+			font-size: 20px;
+		}
+	}
+}
+
+.footer__bottom {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+}
+
+.copyright {
+	margin-top: 20px;
+}
+
+.footer-menu {
+	flex: 1 0 auto;
+	margin-top: 20px;
+	text-align: center;
+
+	&-item {
+		display: inline-block;
+	}
+
+	&-link {
+		display: inline-block;
+		padding: 15px;
+		font-family: $TrebuchetMS-Bold;
+		color: $body-font-color;
+
+		&:first-letter {
+			text-transform: uppercase;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.skylogic {
+	margin-top: 20px;
+	
+	&__link {
+		color: $body-font-color;
+		text-decoration: underline;
+	}
+}
+
+
