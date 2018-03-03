@@ -111,6 +111,8 @@ header.header {
 
 
 .menu {
+	position: relative;
+	z-index: 1;
 	margin-top: 40px;
 	font-size: 0;
 
@@ -123,12 +125,12 @@ header.header {
 		&_parent {
 			position: relative;
 
-			& .menu-link {
+			& > .menu-link {
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
 			}
 
-			&:hover .submenu {
+			&:hover > .submenu {
 				display: block;
 			}
 		}
@@ -172,5 +174,9 @@ header.header {
 	&-link {
 		@extend .menu-link;
 		white-space: nowrap;
+
+		&:hover {
+			color: #000;
+		}
 	}
 }

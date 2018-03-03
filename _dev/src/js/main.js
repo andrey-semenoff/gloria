@@ -74,6 +74,51 @@ $(function () {
     changeYear: true
   });
 
+  //validate bookig-form
+  $('#bookig-form').validity({
+    debug: false,
+    ajax: true,
+    action: '/ajax/book',
+    inputMsg: {
+      success: {
+        show: false
+      },
+      error: {
+          position: 'static'
+      }
+    },
+    formInvalidMsg: false,
+    detectIntervention: true
+  });
+
+  $('.form__input[name="children"]').on('change', function() {
+    var val = $(this).val();
+
+    if( val === '' || val === '0' || val === 0 || Number.isNaN(val) ) {
+      $('.form__label_children-ages').hide().next().children('input').focus();
+    } else {
+      $('.form__label_children-ages').show().children('input').focus();
+    }
+  });
+
+
+  //validate feedback-form
+  $('#feedback-form').validity({
+    debug: false,
+    ajax: true,
+    action: '/ajax/feedback',
+    inputMsg: {
+      success: {
+        show: false
+      },
+      error: {
+          position: 'static'
+      }
+    },
+    formInvalidMsg: false,
+    detectIntervention: true
+  });
+
 });
 
 

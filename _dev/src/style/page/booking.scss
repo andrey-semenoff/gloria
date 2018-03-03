@@ -19,9 +19,17 @@
     	text-decoration: underline;
     	white-space: nowrap;
     }
+
+    &_children-ages {
+    	display: none;
+    }
   }
 
   .form-group .form__label {
     width: 50%;
+  }
+
+  .validity-input-msg {
+  	white-space: normal;
   }
 }

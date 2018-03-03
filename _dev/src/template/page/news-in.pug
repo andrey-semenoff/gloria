@@ -1,0 +1,42 @@
+extends ../main
+
+block vars
+	- 
+		var show_button = true,
+				breadcrumbs = [
+				{
+					url: "/",
+					name: "Главная"
+				},
+				{
+					url: "news.html",
+					name: "Новости"
+				},
+				{
+					url: "/",
+					name: "Название новости"
+				}
+			];
+
+
+block content
+	// ====== news-in ======= 
+	.news-in
+		._container
+			.title
+				.title__inner
+					.title__text Название новости
+
+			.news-in__text
+				img(src="/img/photos/photo_1.jpg", alt="", style="float: left; margin: 0 15px 15px 0;")
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eos nesciunt similique iure accusamus vitae eius vero alias ipsa aspernatur atque, et dignissimos fuga eum nostrum quas officiis laudantium magni.
+
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae deserunt, totam architecto odit est et! Deserunt quibusdam debitis, perferendis nulla quasi deleniti autem commodi tempore animi sequi eum mollitia non dolorum, est ut delectus incidunt a error recusandae corporis quam beatae officia! Asperiores sunt placeat voluptates reiciendis illum aperiam obcaecati ducimus qui debitis cumque in vitae beatae quia incidunt voluptas animi, magni architecto, praesentium quisquam nisi quibusdam maiores delectus? Dicta, commodi nostrum deleniti voluptate, amet ex adipisci fugit officia iste. Voluptatibus molestiae, autem, nesciunt at necessitatibus sed, cumque laudantium et, ullam eligendi beatae? Aut iusto ut eaque, quod impedit eveniet.
+
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eos nesciunt similique iure accusamus vitae eius vero alias ipsa aspernatur atque, et dignissimos fuga eum nostrum quas officiis laudantium magni.
+
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae deserunt, totam architecto odit est et! Deserunt quibusdam debitis, perferendis nulla quasi deleniti autem commodi tempore animi sequi eum mollitia non dolorum, est ut delectus incidunt a error recusandae corporis quam beatae officia! Asperiores sunt placeat voluptates reiciendis illum aperiam obcaecati ducimus qui debitis cumque in vitae beatae quia incidunt voluptas animi, magni architecto, praesentium quisquam nisi quibusdam maiores delectus? Dicta, commodi nostrum deleniti voluptate, amet ex adipisci fugit officia iste. Voluptatibus molestiae, autem, nesciunt at necessitatibus sed, cumque laudantium et, ullam eligendi beatae? Aut iusto ut eaque, quod impedit eveniet.
+				
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eos nesciunt similique iure accusamus vitae eius vero alias ipsa aspernatur atque, et dignissimos fuga eum nostrum quas officiis laudantium magni.
+
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae deserunt, totam architecto odit est et! Deserunt quibusdam debitis, perferendis nulla quasi deleniti autem commodi tempore animi sequi eum mollitia non dolorum, est ut delectus incidunt a error recusandae corporis quam beatae officia! Asperiores sunt placeat voluptates reiciendis illum aperiam obcaecati ducimus qui debitis cumque in vitae beatae quia incidunt voluptas animi, magni architecto, praesentium quisquam nisi quibusdam maiores delectus? Dicta, commodi nostrum deleniti voluptate, amet ex adipisci fugit officia iste. Voluptatibus molestiae, autem, nesciunt at necessitatibus sed, cumque laudantium et, ullam eligendi beatae? Aut iusto ut eaque, quod impedit eveniet.

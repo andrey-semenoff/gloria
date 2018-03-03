@@ -36,17 +36,17 @@ block content
 				._row.form-group
 					label.form__label
 						.form__label-text.form__label-text_required Дата приезда
-						input.form__input.datepicker(type="text" name="name" data-rules="required" data-fieldname="Дата приезда" placeholder="день/месяц/год")
+						input.form__input.datepicker(type="text" name="date_arrive" data-rules="required|pattern(^(\\d){2}\\/(\\d){2}\\/(\\d){4}$)" data-fieldname="Дата приезда" placeholder="день/месяц/год")
 					label.form__label
 						.form__label-text.form__label-text_required Дата отъезда
-						input.form__input.datepicker(type="text" name="name" data-rules="required" data-fieldname="Дата отъезда" placeholder="день/месяц/год")
+						input.form__input.datepicker(type="text" name="date_departure" data-rules="required|pattern(^(\\d){2}\\/(\\d){2}\\/(\\d){4}$)" data-fieldname="Дата отъезда" placeholder="день/месяц/год")
 
 				label.form__label
 					.form__label-text.form__label-text_required Категория номера
-					select.form__input.form__input_select(name="name" data-rules="required" data-fieldname="Категория номера")
+					select.form__input.form__input_select(name="numer" data-rules="required|number" data-fieldname="Категория номера")
 						option(value="") Выберите категорию номера
 						option(value="1") Стандарт премиум
-						option(value="2") Закарпатский дом
+						option(value="2") Закарпатский дом^(\d){1,2}\/(\d){1,2}\/(\d){1,2}$
 						option(value="3") Стандарт
 						option(value="4") Эконом
 						option(value="5") Эконом +
@@ -56,14 +56,14 @@ block content
 				._row.form-group
 					label.form__label
 						.form__label-text.form__label-text_required Кол-во взрослых
-						input.form__input(type="text" name="name" data-rules="required" data-fieldname="Кол-во взрослых" placeholder="старше 18 лет")
+						input.form__input(type="number" name="adults" data-rules="required|number" data-fieldname="Кол-во взрослых" placeholder="старше 18 лет")
 					label.form__label
 						.form__label-text.form__label-text_required Кол-во детей
-						input.form__input(type="text" name="name" data-rules="required" data-fieldname="Кол-во детей" placeholder="младше 18 лет")
+						input.form__input(type="number" name="children" data-rules="required|number" data-fieldname="Кол-во детей" placeholder="младше 18 лет")
 				
-				label.form__label
+				label.form__label.form__label_children-ages
 					.form__label-text.form__label-text_required Возраст детей (через запятую)
-					input.form__input(type="text" name="name" data-rules="" data-fieldname="Возраст детей")
+					input.form__input(type="text" name="children_ages" data-rules="" data-fieldname="Возраст детей")
 
 				label.form__label
 					.form__label-text.form__label-text_required Телефон
