@@ -50,15 +50,39 @@
 		padding: 15px;
 
 		&__text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 150%;
+			height: 146px;
+			padding: 25px;
+			background-color: rgba(#14caff, 0.8);
+			border-radius: 50%;
+		  font: 42px $TrebuchetMS-Bold;
+		  color: #fff;
+		  text-align: center;
+			z-index: 2;
+
+			&-inner {
+				@include center-translate();
+				width: 60%;
+			}
+		}
+
+	}
+
+	&_main {
+		.apartments-item:nth-of-type(3n+2) .apartments-link {
+			transform: translateY(-50%);
+		}
+
+		.apartments-item__text {
 			@include center-translate();
 		  font: 42px $TrebuchetMS-Bold;
 		  color: #fff;
 		  text-align: center;
 			z-index: 2;
-		}
-
-		&:nth-of-type(3n+2) .apartments-link {
-			transform: translateY(-50%);
 		}
 	}
 
@@ -109,6 +133,36 @@
 
 		}
 	}
+
+	&-col {
+		float: left;
+		width: 50%;
+		padding: 35px 15px;
+
+		h5 {
+			margin: 0;
+			font-size: 20px;
+			text-transform: uppercase;
+		}
+	}
+
+	.apartments-table {
+		border-collapse: collapse;
+
+		td {
+			padding: 5px 15px;
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+			border: 2px solid #49e3ff;
+		}
+
+		thead td {
+			background-color: #49e3ff;
+			border: 2px solid #fff;
+		}
+	}
+
 }
 
 /*! ===== section_yellow ===== */

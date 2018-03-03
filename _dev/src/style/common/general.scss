@@ -40,8 +40,8 @@ body {
   font-family: $TrebuchetMS-Regular;
   font-size: 100%;
   color: $body-font-color;
-  background: $body-color url(../img/bg_body.png) 0 0 no-repeat;
-  background-size: contain;
+  background: $body-color url(../img/bg_body.png) 0 50% no-repeat;
+  background-size: cover;
   word-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

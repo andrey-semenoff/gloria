@@ -1,0 +1,114 @@
+extends ../main
+
+block vars
+	- 
+		var show_button = true,
+				breadcrumbs = [
+				{
+					url: "/",
+					name: "Главная"
+				},
+				{
+					url: "numers.html",
+					name: "Номера"
+				},
+				{
+					url: "/",
+					name: "Семейный коттедж"
+				}
+			];
+
+
+block content
+	// ====== apartment ======= 
+	.apartment
+		._container
+			.title
+				.title__inner
+					.title__text Семейный коттедж
+
+			._row
+				.apartment__img-holder
+					img.apartment__img(src="/img/photos/photo_1.jpg", alt="")
+
+				.apartment__info
+					.apartment__info-title Lorem ipsum dolor sit amet, consectetur.
+					p Lorem ipsum dolor.
+					p Lorem ipsum dolor.
+					p Lorem ipsum dolor.
+					p Lorem ipsum dolor.
+					p Lorem ipsum dolor.
+
+					table
+						thead
+							tr
+								td Стоимость
+								td 01.06 - 21.06
+								td 22.06 - 09.07
+								td 10.07 - 01.09
+						tbody
+							tr
+								td До 5 человек
+								td 100 грн
+								td 100 грн
+								td 100 грн
+							tr
+								td 6-7 человек
+								td 200 грн
+								td 200 грн
+								td 200 грн
+			
+			.owl-carousel.apartment-carousel
+				.apartment-carousel-item
+					img.apartment-carousel-img(src="/img/photos/photo_1.jpg", alt="")
+				.apartment-carousel-item
+					img.apartment-carousel-img(src="/img/photos/photo_1.jpg", alt="")
+				.apartment-carousel-item
+					img.apartment-carousel-img(src="/img/photos/photo_1.jpg", alt="")
+				.apartment-carousel-item
+					img.apartment-carousel-img(src="/img/photos/photo_1.jpg", alt="")
+				.apartment-carousel-item
+					img.apartment-carousel-img(src="/img/photos/photo_1.jpg", alt="")
+
+			.apartment-text
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur vitae quaerat, officiis ex magnam accusamus similique cum saepe facilis eum.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur vitae quaerat, officiis ex magnam accusamus similique cum saepe facilis eum.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur vitae quaerat, officiis ex magnam accusamus similique cum saepe facilis eum.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur vitae quaerat, officiis ex magnam accusamus similique cum saepe facilis eum.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur vitae quaerat, officiis ex magnam accusamus similique cum saepe facilis eum.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur vitae quaerat, officiis ex magnam accusamus similique cum saepe facilis eum.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur vitae quaerat, officiis ex magnam accusamus similique cum saepe facilis eum.
+
+			.apartment-others
+				.apartment-others__title Другие категории номеров
+				ul._row.apartment-others-list
+					li.apartment-others-item
+						a.apartments-link(href="numers-in.html")
+							.apartments-img-holder
+								img.apartments-img(src="/img/apartments/photo_1.jpg", alt="")
+							.apartments-item__text
+								.apartments-item__text-inner Стандарт премиум
+					li.apartment-others-item
+						a.apartments-link(href="numers-in.html")
+							.apartments-img-holder
+								img.apartments-img(src="/img/apartments/photo_1.jpg", alt="")
+							.apartments-item__text
+								.apartments-item__text-inner Стандарт премиум
+					li.apartment-others-item
+						a.apartments-link(href="numers-in.html")
+							.apartments-img-holder
+								img.apartments-img(src="/img/apartments/photo_1.jpg", alt="")
+							.apartments-item__text
+								.apartments-item__text-inner Стандарт премиум
+					li.apartment-others-item
+						a.apartments-link(href="numers-in.html")
+							.apartments-img-holder
+								img.apartments-img(src="/img/apartments/photo_1.jpg", alt="")
+							.apartments-item__text
+								.apartments-item__text-inner Стандарт премиум
+					li.apartment-others-item
+						a.apartments-link(href="numers-in.html")
+							.apartments-img-holder
+								img.apartments-img(src="/img/apartments/photo_1.jpg", alt="")
+							.apartments-item__text
+								.apartments-item__text-inner Стандарт премиум

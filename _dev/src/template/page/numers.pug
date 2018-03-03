@@ -1,0 +1,161 @@
+extends ../main
+
+block vars
+	- 
+		var show_button = true,
+				breadcrumbs = [
+				{
+					url: "/",
+					name: "Главная"
+				},
+				{
+					url: "/",
+					name: "Номера"
+				}
+			];
+
+
+block content
+	// ====== apartments ======= 
+	.apartments
+		._container
+			ul._row.apartments-list
+				li.apartments-item
+					a.apartments-link(href="numers-in.html")
+						.apartments-img-holder
+							img.apartments-img(src="/img/apartments/photo_1.jpg", alt="")
+						.apartments-item__text
+							.apartments-item__text-inner Стандарт премиум
+				li.apartments-item
+					a.apartments-link(href="numers-in.html")
+						.apartments-img-holder
+							img.apartments-img(src="/img/apartments/photo_2.jpg", alt="")
+						.apartments-item__text
+							.apartments-item__text-inner Закарпатский дом
+				li.apartments-item
+					a.apartments-link(href="numers-in.html")
+						.apartments-img-holder
+							img.apartments-img(src="/img/apartments/photo_3.jpg", alt="")
+						.apartments-item__text
+							.apartments-item__text-inner Стандарт
+				li.apartments-item
+					a.apartments-link(href="numers-in.html")
+						.apartments-img-holder
+							img.apartments-img(src="/img/apartments/photo_4.jpg", alt="")
+						.apartments-item__text
+							.apartments-item__text-inner Эконом
+				li.apartments-item
+					a.apartments-link(href="numers-in.html")
+						.apartments-img-holder
+							img.apartments-img(src="/img/apartments/photo_5.jpg", alt="")
+						.apartments-item__text
+							.apartments-item__text-inner Эконом +
+				li.apartments-item
+					a.apartments-link(href="numers-in.html")
+						.apartments-img-holder
+							img.apartments-img(src="/img/apartments/photo_6.jpg", alt="")
+						.apartments-item__text
+							.apartments-item__text-inner Семейный коттедж			
+	
+			._row
+				.apartments-col
+					h5 Номера
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error unde, dicta labore omnis amet impedit veniam temporibus tempore architecto perspiciatis.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error unde, dicta labore omnis amet impedit veniam temporibus tempore architecto perspiciatis.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error unde, dicta labore omnis amet impedit veniam temporibus tempore architecto perspiciatis.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error unde, dicta labore omnis amet impedit veniam temporibus tempore architecto perspiciatis.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error unde, dicta labore omnis amet impedit veniam temporibus tempore architecto perspiciatis.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error unde, dicta labore omnis amet impedit veniam temporibus tempore architecto perspiciatis.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error unde, dicta labore omnis amet impedit veniam temporibus tempore architecto perspiciatis.
+
+				.apartments-col
+					table.apartments-table
+						thead
+							tr
+								td Категория номера
+								td(width="8%") Кол-во человек
+								td 01.06 - 21.06
+								td 22.06 - 09.07
+								td 10.07 - 01.09
+						tbody
+							tr
+								td(colspan=2)
+								td(colspan=3) Цена за номер (сутки / ночь)
+							tr
+								td(rowspan=2) Classic B
+								td 2
+								td 950 грн.
+								td 1245 грн.
+								td 1580 грн.
+							tr
+								td 3
+								td 1095 грн.
+								td 1385 грн.
+								td 1880 грн.
+
+							tr
+								td(rowspan=2) Classic A
+								td 2
+								td 950 грн.
+								td 1245 грн.
+								td 1580 грн.
+							tr
+								td 3
+								td 1095 грн.
+								td 1385 грн.
+								td 1880 грн.
+
+							tr
+								td(rowspan=2) Classic family
+								td 2
+								td 950 грн.
+								td 1245 грн.
+								td 1580 грн.
+							tr
+								td 3
+								td 1095 грн.
+								td 1385 грн.
+								td 1880 грн.
+
+							tr
+								td(rowspan=2) Comfort family
+								td 2
+								td 950 грн.
+								td 1245 грн.
+								td 1580 грн.
+							tr
+								td 3
+								td 1095 грн.
+								td 1385 грн.
+								td 1880 грн.
+
+							tr
+								td(rowspan=2) Comfort family luxe
+								td 2
+								td 950 грн.
+								td 1245 грн.
+								td 1580 грн.
+							tr
+								td 3
+								td 1095 грн.
+								td 1385 грн.
+								td 1880 грн.
+
+							tr
+								td(rowspan=2) VIP
+								td 2
+								td 950 грн.
+								td 1245 грн.
+								td 1580 грн.
+							tr
+								td 3
+								td 1095 грн.
+								td 1385 грн.
+								td 1880 грн.
+
+							tr
+								td(rowspan=2) Дополнительное место
+								td 1
+								td 950 грн.
+								td 1245 грн.
+								td 1580 грн.
