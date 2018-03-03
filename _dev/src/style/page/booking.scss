@@ -1,0 +1,27 @@
+/*! ===== booking ===== */
+.booking {
+
+}
+
+#bookig-form {
+	width: 400px;
+	padding: 0;
+
+	.form__label {
+    width: 100%;
+
+    &-link {
+    	position: absolute;
+    	top: 70%;
+    	left: 105%;
+    	transform: translateY(-50%);
+    	color: deepskyblue;
+    	text-decoration: underline;
+    	white-space: nowrap;
+    }
+  }
+
+  .form-group .form__label {
+    width: 50%;
+  }
+}

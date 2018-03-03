@@ -1,0 +1,79 @@
+extends ../main
+
+block vars
+	- 
+		var show_button = false,
+				breadcrumbs = [
+				{
+					url: "/",
+					name: "Главная"
+				},
+				{
+					url: "/",
+					name: "Бронирование"
+				}
+			];
+
+
+block content
+	// ====== booking ======= 
+	.booking
+		._container
+			.title
+				.title__inner
+					.title__text Бронирование
+
+			.booking__text
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum illo tempora, eius sunt fugiat similique iure dignissimos adipisci dicta doloremque!
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum illo tempora, eius sunt fugiat similique iure dignissimos adipisci dicta doloremque!
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum illo tempora, eius sunt fugiat similique iure dignissimos adipisci dicta doloremque!
+
+			form.form#bookig-form(action="")
+				label.form__label
+					.form__label-text.form__label-text_required ФИО
+					input.form__input(type="text" name="name" data-rules="required|length(2)" data-fieldname="Имя" autofocus)
+
+				._row.form-group
+					label.form__label
+						.form__label-text.form__label-text_required Дата приезда
+						input.form__input.datepicker(type="text" name="name" data-rules="required" data-fieldname="Дата приезда" placeholder="день/месяц/год")
+					label.form__label
+						.form__label-text.form__label-text_required Дата отъезда
+						input.form__input.datepicker(type="text" name="name" data-rules="required" data-fieldname="Дата отъезда" placeholder="день/месяц/год")
+
+				label.form__label
+					.form__label-text.form__label-text_required Категория номера
+					select.form__input.form__input_select(name="name" data-rules="required" data-fieldname="Категория номера")
+						option(value="") Выберите категорию номера
+						option(value="1") Стандарт премиум
+						option(value="2") Закарпатский дом
+						option(value="3") Стандарт
+						option(value="4") Эконом
+						option(value="5") Эконом +
+						option(value="6") Семейный коттедж
+					a.form__label-link(href="numers.html") Смотреть все категории номеров
+
+				._row.form-group
+					label.form__label
+						.form__label-text.form__label-text_required Кол-во взрослых
+						input.form__input(type="text" name="name" data-rules="required" data-fieldname="Кол-во взрослых" placeholder="старше 18 лет")
+					label.form__label
+						.form__label-text.form__label-text_required Кол-во детей
+						input.form__input(type="text" name="name" data-rules="required" data-fieldname="Кол-во детей" placeholder="младше 18 лет")
+				
+				label.form__label
+					.form__label-text.form__label-text_required Возраст детей (через запятую)
+					input.form__input(type="text" name="name" data-rules="" data-fieldname="Возраст детей")
+
+				label.form__label
+					.form__label-text.form__label-text_required Телефон
+					input.form__input(type="tel" name="phone" data-rules="required|tel" data-fieldname="Телефон" placeholder="+ 38 067 123 45 67")
+				label.form__label
+					.form__label-text.form__label-text_required E-mail
+					input.form__input(type="email" name="email" data-rules="required|email" data-fieldname="E-mail")
+				label.form__label
+					.form__label-text Примечание
+					textarea.form__input.form__input_textarea(name="text" data-rules="length(6)" data-fieldname="Примечание")
+				
+				.form__button-holder
+					button.button.button_orange.form__button(type="submit") Отправить

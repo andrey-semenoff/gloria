@@ -58,6 +58,22 @@ $(function () {
       }
     }
   });
+
+  //Open feedback form
+  $('.button_feedback').fancybox({
+    padding: 3,
+    wrapCSS: 'feedback-modal',
+    afterShow: function() {
+      $('.feedback-modal input').first().focus();
+    }
+  });
+
+  //Datepicker init
+  $(".datepicker").datepicker({
+    changeMonth: true,
+    changeYear: true
+  });
+
 });
 
 

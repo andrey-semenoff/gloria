@@ -105,7 +105,7 @@ main.main {
     border: 2px solid #fff;
     box-shadow: 5px 0 50px #fff;
 
-    &:hover {
+    &:hover, &:focus {
       background: -webkit-linear-gradient(#ffa404, #febd18);
       background: -o-linear-gradient(#ffa404, #febd18);
       background: linear-gradient(#ffa404, #febd18);
@@ -118,15 +118,16 @@ main.main {
     background: linear-gradient(#49e3ff, #14caff);
     box-shadow: 5px 0 50px #fff;
 
-    &:hover {
+    &:hover, &:focus {
       background: -webkit-linear-gradient(#14caff, #49e3ff);
       background: -o-linear-gradient(#14caff, #49e3ff);
       background: linear-gradient(#14caff, #49e3ff);
     }
   }
 
-  &:hover {
+  &:hover, &:focus {
     cursor: pointer;
+    outline: none;
   }
 }
 
@@ -343,3 +344,109 @@ main.main {
     line-height: 0;
   }
 }
+
+.page-body {
+  position: relative;
+  padding: 0 20% 80px 0;
+}
+
+.button_feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+.feedback-modal {
+  .fancybox-close {
+  top: 3px;
+  right: 3px;
+  background: none;
+  font-size: 20px;
+  color: $body-font-color;
+
+  &:after {
+    content: '\f00d';
+    font: 16px "FontAwesome";
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    line-height: 0;
+  }
+}
+}
+
+.form {
+  max-width: 100%;
+  background-color: #fff;
+  padding: 35px 75px;
+
+  &__title {
+    text-align: center;
+
+    &-inner {
+      display: inline-block;
+      padding: 0 7px;
+      border-bottom: 2px solid $orange;
+      font-size: 20px;
+    }
+  }
+
+  &-group {
+    .form__label {
+      float: left;
+      width: 50%;
+      padding: 0 10px 0 0;
+
+      &:last-child {
+        padding: 0 0 0 10px;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    width: 300px;
+    margin-top: 15px;
+
+    &-text {
+
+
+      &_required:after {
+        content: '*';
+        display: inline-block;
+        margin-left: 5px;
+        color: red;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px 10px;
+
+    &_textarea {
+      min-height: 100px;
+      max-height: 200px;
+      resize: vertical;
+    }
+  }
+
+  &__button {
+    padding: 10px 25px;
+    font-size: 18px;
+
+    &-holder {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}
+

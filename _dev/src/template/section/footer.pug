@@ -32,3 +32,23 @@ footer.footer
 			// ====== skylogic ======= 
 			.skylogic
 				a.skylogic__link(href="https://skylogic.com.ua") Создание и продвижение сайта
+
+.hidden
+	form.form#feedback-form(action="")
+		.form__title
+			.form__title-inner Задать вопрос
+		label.form__label
+			.form__label-text.form__label-text_required Имя
+			input.form__input(type="text" name="name" data-rules="required|length(2)" data-fieldname="Имя" autofocus)
+		label.form__label
+			.form__label-text.form__label-text_required Телефон
+			input.form__input(type="tel" name="phone" data-rules="required|tel" data-fieldname="Телефон")
+		label.form__label
+			.form__label-text E-mail
+			input.form__input(type="email" name="email" data-rules="email" data-fieldname="E-mail")
+		label.form__label
+			.form__label-text Текст сообщения
+			textarea.form__input.form__input_textarea(name="text" data-rules="length(6)" data-fieldname="Текст сообщения")
+		
+		.form__button-holder
+			button.button.button_blue.form__button(type="submit") Отправить
