@@ -9,9 +9,19 @@ header.header {
 	width: 30%;
 	padding-top: 45px;
 	font-family: $Drina;
+
+
+	@include media(992) {
+		padding: 15px 0 0;
+	}
+
+	@include media(480) {
+		float: none;
+		width: 70%;
+	}
 	
 	&__link {
-
+		display: inline-block;
 	}
 
 	&__img {
@@ -19,11 +29,15 @@ header.header {
 	}
 }
 
-
-
 .header__right {
 	float: right;
 	width: 70%;
+
+
+	@include media(480) {
+		float: none;
+		width: 100%;
+	}
 }
 
 .header__contacts {
@@ -31,6 +45,10 @@ header.header {
 	font-family: $TrebuchetMS-Bold;
 	color: #fff;
 	text-align: right;
+
+  @include media(992) {
+  	padding-right: 75px;
+  }
 }
 
 .header__phones {
@@ -39,19 +57,58 @@ header.header {
 	font-size: 24px;
 	margin: 0;
 
+  @include media(992) {
+  	display: none;
+    position: absolute;
+    right: 0;
+    top: 96%;
+    background-color: $orange;
+	  border: 2px solid #fff;
+		box-shadow: 5px 0 50px #fff;
+  }
+
+  @include media(480) {
+    right: 50%;
+    transform: translateX(70%);
+  }
+
+  &-holder {
+  	display: inline-block;
+  	position: relative;
+  
+	  &_show {
+
+	  	.header__phones {
+	  		display: block;
+	  	}
+			
+			.button {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+		 	}
+	  }
+  }
+
 	&-item {
 		display: inline-block;
 		margin-left: 30px;
+
+	  @include media(992) {
+			margin-left: 0;
+			padding: 5px 10px;
+	  }
 	}
 
 	&-link {
 		display: inline-block;
 		color: #fff;
+		white-space: nowrap;
 
 		&:hover {
 			text-decoration: underline;
 		}
 	}
+
 }
 
 
@@ -70,12 +127,13 @@ header.header {
 		height: 18px;
 		overflow: hidden;
 		margin: 0;
-		
-		&:hover {
+	}
+
+	&_show {
+		.header__languages-list {
 			height: auto;
 		}
 	}
-
 
 	&-item {
 		display: block;
@@ -103,9 +161,44 @@ header.header {
 
 .header__menu {
 	text-align: right;
+
+	@include media(992) {
+		position: fixed;
+		top: 0;
+		right: -300px;
+		width: 300px;
+		max-width: 100%;
+		height: 100%;
+		background-color: $orange;
+		padding: 30px 0 0 0;
+		z-index: 98;
+		transition: all 0.5s;
+	}
 	
 	.button {
 		margin-top: 25px;
+	}
+
+
+	&_show {
+		right: 0;
+
+		.burger {
+			left: 35px;
+			box-shadow: none;
+		  border-color: transparent;
+
+			@include media(640) {
+				left: 80%;
+				left: 20px;
+			}
+
+			&:hover {
+				.burger__bar {
+					background-color: #005aa6;
+				}
+			}
+		}
 	}
 }
 
@@ -122,16 +215,48 @@ header.header {
 		font-size: 16px;
 		text-align: left;
 
+		@include media(992) {
+			display: block;
+		}
+
 		&_parent {
 			position: relative;
+
+			&:after {
+				display: none;
+				content: '';
+				position: absolute;
+				top: 25px;
+				right: 15px;
+				transform: translateY(-50%);
+				border-top: 5px solid #fff;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+
+				@include media(992) {
+					display: block;
+				}
+			}
 
 			& > .menu-link {
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
+
+				@include media(992) {
+					width: 80%;
+				}
 			}
 
 			&:hover > .submenu {
-				display: block;
+				@include media(992, 'min-width') {
+					display: block;
+				}
+			}
+
+			&_show {
+				& > .submenu {
+					display: block;
+				}
 			}
 		}
 
@@ -148,12 +273,17 @@ header.header {
 		color: #fff;
 		font-family: $TrebuchetMS-Bold;
 
+		@include media(992) {
+			display: block;
+		}
+
 		&:first-letter {
 			text-transform: uppercase;
 		}
 
 		&:hover {
 			background-color: $orange;
+			color: $body-font-color;
 		}
 	}
 }
@@ -167,8 +297,15 @@ header.header {
 	border-radius: 25px;
 	border-top-left-radius: unset;
 
-	&-item {
+	@include media(992) {
+		position: static;
+		padding-left: 25px;
+	}
 
+	&-item {
+		@include media(992) {
+			padding-left: 25px;
+		}
 	}
 
 	&-link {
@@ -178,5 +315,67 @@ header.header {
 		&:hover {
 			color: #000;
 		}
+	}
+}
+
+
+.burger {
+	display: none;
+	position: absolute;
+	left: -80px;
+	top: 25px;
+	width: 25px;
+	height: 20px;
+	cursor: pointer;
+	transition: all 0.5s;
+	background-color: $orange;
+	width: 60px;
+	height: 50px;
+	border-radius: 35px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 20px #fff;
+
+	@include media(992) {
+		display: block;
+	}
+
+	@include media(640) {
+		// top: 85px;
+	}
+
+	@include media(480) {
+		// top: 110px;
+	}
+
+	&__bar {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 25px;
+		height: 4px;
+		background-color: #fff;
+
+		&_top {
+			top: 13px;
+		}
+
+		&_mid {
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&_bot {
+			bottom: 13px;
+		}
+	}
+}
+
+.header__button-holder {
+	margin-top: 35px;
+	text-align: right;
+
+	@include media(992) {
+		// text-align: left;
+		// padding-left: 20%;
 	}
 }

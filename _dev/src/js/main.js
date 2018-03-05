@@ -7,8 +7,38 @@ $(function () {
   
   // owl-carousel init
   $(".owl-carousel[data-type='common']").owlCarousel({
-  	items: 4,
-  	loop: true,
+    items: 4,
+    loop: true,
+    smartSpeed: 1000,
+    autoHeight: true,
+    nav: true,
+    navText: [
+      "<span class='fa fa-chevron-left fa-2x owl-nav_arrow'></span>",
+      "<span class='fa fa-chevron-right fa-2x owl-nav_arrow'></span>"
+    ],
+    responsive: {
+      992: {
+        items: 4,
+      },
+      
+      768: {
+        items: 3,
+      },
+      
+      550: {
+        items: 2,
+      },
+
+      0: {
+        items: 1,
+      }
+    }
+  });
+  
+  // owl-carousel init
+  $(".apartment-carousel").owlCarousel({
+  	items: 6,
+    margin: 30,
   	smartSpeed: 1000,
   	autoHeight: true,
   	nav: true,
@@ -18,11 +48,11 @@ $(function () {
   	],
   	responsive: {
   		992: {
-        items: 4,
+        items: 6,
       },
       
       768: {
-      	items: 3,
+      	items: 4,
       },
       
       550: {
@@ -118,6 +148,39 @@ $(function () {
     formInvalidMsg: false,
     detectIntervention: true
   });
+
+  // Show|hide modile menu
+  $(document).on('click', '.burger', function(e) {
+    var $this = $(this),
+        $menu = $('.header__menu');
+
+    $menu.toggleClass('header__menu_show');
+  });
+
+  // Show|hide phones
+  $(document).on('click', '.button_show-phones', function(e) {
+    var $this = $(this),
+        $menu = $('.header__phones-holder');
+
+    $menu.toggleClass('header__phones-holder_show');
+    $('.header__languages').removeClass('header__languages_show');
+  });
+
+  // Show|hide lang
+  $(document).on('click', '.header__languages', function(e) {
+    var $this = $(this);
+
+    $this.toggleClass('header__languages_show');
+    $('.header__phones-holder').removeClass('header__phones-holder_show');
+  });
+
+  // Show|hide parent menu
+  $(document).on('click', '.menu-item_parent', function(e) {
+    var $this = $(this);
+
+    $this.toggleClass('menu-item_parent_show');
+  });
+
 
 });
 

@@ -8,11 +8,14 @@ header.header
 
 			.header__right
 				.header__contacts
-					ul.header__phones
-						li.header__phones-item
-							a.header__phones-link(href="callto:123456") +38 048 123 45 67
-						li.header__phones-item
-							a.header__phones-link(href="callto:123456") +38 048 123 45 67
+					.header__phones-holder
+						button.button.button_orange.button_show-phones
+							.fa.fa-phone
+						ul.header__phones
+							li.header__phones-item
+								a.header__phones-link(href="callto:123456") +38 048 123 45 67
+							li.header__phones-item
+								a.header__phones-link(href="callto:123456") +38 048 123 45 67
 
 					.header__languages
 						ul.header__languages-list
@@ -44,7 +47,14 @@ header.header
 						li.menu-item
 							a.menu-link(href="contacts.html") контакты
 					
-					if show_button
+					.burger
+						.burger__bar.burger__bar_top
+						.burger__bar.burger__bar_mid
+						.burger__bar.burger__bar_bot
+
+				if show_button
+					.header__button-holder
 						a.button.button_orange(href="booking.html") забронировать
+
 	
 		include breadcrumbs

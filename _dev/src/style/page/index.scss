@@ -8,11 +8,23 @@
 	padding: 200px 15px 250px;
 	text-align: right;
 
+	@include media(768) {
+		padding: 50px 15px;
+	}
+
 	&-img {
 		position: absolute;
 		left: -200px;
 		bottom: 0;
 		z-index: -1;
+
+		@include media(1100) {
+			width: 68%;
+			left: -100px;
+		}
+		@include media(768) {
+			display: none;
+		}
 	}
 
 	&-text {
@@ -23,10 +35,21 @@
 
 	&-text__big {
 		font-size: 61px;
+
+		@include media(768) {
+			font-size: 48px;
+		}
+		@include media(768) {
+			font-size: 30px;
+		}
 	}
 
 	&-text__normal {
 		margin-top: 10px;
+
+		@include media(768) {
+			font-size: 20px;
+		}
 	}
 
 	&__button {
@@ -48,6 +71,15 @@
 		float: left;
 		width: 33.33%;
 		padding: 15px;
+		text-align: center;
+
+		@include media(992) {
+			width: 50%;
+		}
+		@include media(640) {
+			float: none;
+			width: 100%;
+		}
 
 		&__text {
 			position: absolute;
@@ -57,7 +89,7 @@
 			width: 150%;
 			height: 146px;
 			padding: 25px;
-			background-color: rgba(#14caff, 0.8);
+			background-color: rgba(#38b2c1, 0.8);
 			border-radius: 50%;
 		  font: 42px $TrebuchetMS-Bold;
 		  color: #fff;
@@ -75,6 +107,10 @@
 	&_main {
 		.apartments-item:nth-of-type(3n+2) .apartments-link {
 			transform: translateY(-50%);
+
+			@include media(992) {
+				transform: none;
+			}
 		}
 
 		.apartments-item__text {
@@ -83,16 +119,32 @@
 		  color: #fff;
 		  text-align: center;
 			z-index: 2;
+
+			@include media(1230) {
+				height: 100px;
+				font-size: 28px;
+			}
 		}
 	}
 
 	&-link {
 		position: relative;
 		display: inline-block;
+		// max-width: 100%;
 		width: 390px;
 		height: 390px;
 		border-radius: 50%;
 		overflow: hidden;
+
+		@include media(1230) {
+			width: 290px;
+			height: 290px;
+		}
+
+		@include media(640) {
+			width: 250px;
+			height: 250px;
+		}
 
 		&:before {
 			content: '';
@@ -128,9 +180,16 @@
 		margin-top: -100px;
 		text-align: center;
 
-		&__img {
-		margin-top: -100px;
+		@include media(992) {
+			margin: 0;
+		}
 
+		&__img {
+			margin-top: -100px;
+			
+			@include media(992) {
+				margin: 0;
+			}
 		}
 	}
 
@@ -144,6 +203,10 @@
 			font-size: 20px;
 			text-transform: uppercase;
 		}
+
+		p {
+			font-size: 14px;
+		}
 	}
 
 	.apartments-table {
@@ -154,11 +217,16 @@
 			font-size: 12px;
 			font-weight: bold;
 			text-align: center;
-			border: 2px solid #49e3ff;
+			border: 2px solid #d6f4fe;
+			background-color: #fff;
+
+			a {
+				color: #4cbec7;
+			}
 		}
 
 		thead td {
-			background-color: #49e3ff;
+			background-color: #d6f4fe;
 			border: 2px solid #fff;
 		}
 	}
@@ -170,10 +238,23 @@
 	padding: 200px 15px 110px;
 	background: #fff url(../img/bg_yellow.jpg) center no-repeat;
 	background-size: contain;
+
+	@include media(992) {
+		margin: 50px 0;
+		padding: 0;
+		background-size: cover;
+		background-color: #FED940;
+		background-image: none;
+	}
+
 	
 	&__inner {
 		padding: 50px 130px;
 		border: 2px solid #fff;
+
+		@include media(992) {
+			padding: 50px 15px;
+		}
 
 		h6 {
 			text-transform: uppercase;
@@ -190,7 +271,7 @@
 
 /*! ===== section_white ===== */
 .section_white {
-	
+	padding: 0 15px;
 }
 
 /*! ===== section_blue ===== */
@@ -199,6 +280,17 @@
 	padding: 250px 15px 200px;
 	background: #fff url(../img/bg_blue.png) center no-repeat;
 
+	@include media(992) {
+		margin: 50px 0;
+		padding: 150px 15px;
+		background-color: #AFF2FF;
+	}
+	
+	@include media(640) {
+		margin-bottom: 0;
+		padding: 0 15px 50px;
+	}
+
 	&__inner {
 		position: relative;
 	}
@@ -206,6 +298,11 @@
 	.title {
 		text-align: left;
 		margin: 0;
+
+		@include media(640) {
+			padding: 50px 15px;
+		}
+
 	}
 }
 
@@ -213,6 +310,13 @@
 	position: absolute;
 	top: -75%;
 	right: 10%;
+
+	@include media(1200) {
+		top: -55%;
+	}
+	@include media(640) {
+		display: none;
+	}
 }
 
 .section_blue__news-item-date {
