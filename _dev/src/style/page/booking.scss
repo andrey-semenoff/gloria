@@ -1,11 +1,15 @@
 /*! ===== booking ===== */
 .booking {
-
+  padding: 0 15px;
 }
 
 #bookig-form {
 	width: 400px;
 	padding: 0;
+
+  @include media(768) {
+    margin: auto;
+  }
 
 	.form__label {
     width: 100%;
@@ -18,6 +22,12 @@
     	color: deepskyblue;
     	text-decoration: underline;
     	white-space: nowrap;
+
+      @include media(768) {
+        display: inline-block;
+        position: static;
+        margin-top: 15px;
+      }
     }
 
     &_children-ages {
@@ -27,6 +37,10 @@
 
   .form-group .form__label {
     width: 50%;
+
+    @include media(640) {
+      width: 100%;
+    }
   }
 
   .validity-input-msg {

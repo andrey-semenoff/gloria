@@ -50,6 +50,10 @@ body {
 
 .body_service {
   background-image: url(../img/bg_service.jpg);
+
+  @include media(992) {
+    background-image: url(../img/bg_body.png);
+  }
 }
 
 .body_contacts {
@@ -177,6 +181,7 @@ main.main {
   &__text {
     position: relative;
     font: 50px $Drina;
+    line-height: 1em;
     z-index: 1;
   }
 }
@@ -374,7 +379,19 @@ main.main {
 
 .page-body {
   position: relative;
-  padding: 0 20% 80px 0;
+  padding: 0 200px 80px 15px;
+
+  @include media(768) {
+    padding-right: 15px;
+  }
+
+  &__buttons-holder {
+
+    @include media(768) {
+      margin-top: 50px;
+      text-align: center;
+    }
+  }
 }
 
 .button_feedback {
@@ -382,6 +399,11 @@ main.main {
   top: 0;
   right: 0;
   padding: 15px 25px;
+
+
+  @include media(768) {
+    position: static;
+  }
 }
 
 .hidden {
@@ -428,6 +450,10 @@ main.main {
       float: left;
       width: 50%;
       padding: 0 10px 0 0;
+      
+      @include media(768) {
+        padding: 0 !important;
+      }
 
       &:last-child {
         padding: 0 0 0 10px;

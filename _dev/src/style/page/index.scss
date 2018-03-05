@@ -96,6 +96,11 @@
 		  text-align: center;
 			z-index: 2;
 
+			@include media(1230) {
+				height: 100px;
+				font-size: 28px;
+			}
+
 			&-inner {
 				@include center-translate();
 				width: 60%;
@@ -326,4 +331,8 @@
 .section_blue__link {
 	text-decoration: underline;
 	color: $body-font-color;
+}
+
+.service {
+	padding: 0 15px;
 }

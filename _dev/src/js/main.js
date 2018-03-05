@@ -67,7 +67,7 @@ $(function () {
 
 
   // Remove padding, set opening and closing animations, close if clicked and disable overlay
-  $(".photos-link").fancybox({
+  $(".photos-link, .apartment-carousel-item").fancybox({
     padding: 3,
     openEffect : 'fade',
     openSpeed  : 150,
